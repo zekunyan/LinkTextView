@@ -47,12 +47,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
         linkTextView.setClickableText("Example link.\nManual link.");
 
         //Set example link
-        exampleLinkID = linkTextView.addClick(exampleLinkBegin, exampleLinkEnd, new LinkTextView.OnClickInLinkText() {
+        exampleLinkID = linkTextView.addClick(
+                exampleLinkBegin,                 //Link begin index
+                exampleLinkEnd,                   //Link end index
+                new LinkTextView.OnClickInLinkText() {
             @Override
             public void onLinkTextClick(String clickText, int linkID, Object attachment) {
                 infoTextView.setText("You click example link. It's attachment is: " + attachment);
             }
-        }, "This is example link attachment", true, Color.BLACK, Color.YELLOW, Color.WHITE, Color.GREEN);
+        },
+                "This is example link attachment", //Link attachment
+                true,                              //Show link underline
+                Color.BLACK,                       //Text normal color
+                Color.YELLOW,                      //Text pressed color
+                Color.WHITE,                       //Background normal color
+                Color.GREEN                        //Background pressed color
+        );
     }
 
     @Override
@@ -68,12 +78,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 linkTextView.setBackgroundNormalColor(exampleLinkID, Color.CYAN);
                 break;
             case R.id.button_add:
-                manualLinkID = linkTextView.addClick(manualLinkBegin, manualLinkEnd, new LinkTextView.OnClickInLinkText() {
+                manualLinkID = linkTextView.addClick(manualLinkBegin, manualLinkEnd,
+                        new LinkTextView.OnClickInLinkText() {
                     @Override
                     public void onLinkTextClick(String clickText, int linkID, Object attachment) {
                         infoTextView.setText("You click manual link. It's attachment is: " + attachment);
                     }
-                },editText.getText());
+                }, editText.getText());
                 break;
             case R.id.button_remove:
                 linkTextView.removeLink(manualLinkID);

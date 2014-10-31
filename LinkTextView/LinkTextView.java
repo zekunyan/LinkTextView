@@ -60,8 +60,8 @@ public class LinkTextView extends TextView {
         /**
          * Called when click the link.
          *
-         * @param clickText  Link text.
-         * @param linkID     Link ID.
+         * @param clickText Link text.
+         * @param linkID Link ID.
          * @param attachment Data attached to the link.
          */
         public void onLinkTextClick(String clickText, int linkID, Object attachment);
@@ -80,7 +80,6 @@ public class LinkTextView extends TextView {
 
     /**
      * Set the text you want to show. This should be called before addClick.
-     *
      * @param text The text you want to show.
      */
     public void setClickableText(String text) {
@@ -93,9 +92,9 @@ public class LinkTextView extends TextView {
     /**
      * Add a new clickable link.
      *
-     * @param start      Begin index for link.
-     * @param end        End index for link.
-     * @param click      Callback.
+     * @param start Begin index for link.
+     * @param end End index for link.
+     * @param click Callback.
      * @param attachment Data attached to the link.
      * @return The ID for this clickable link.
      */
@@ -133,15 +132,15 @@ public class LinkTextView extends TextView {
      * Add a new clickable link with additional configurations.
      * Color is 0xARGB.
      *
-     * @param start            Begin index for link.
-     * @param end              End index for link.
-     * @param click            Callback.
-     * @param attachment       Data attached to the link.
-     * @param isUnderLine      Whether to show the under line.
-     * @param textNormalColor  Normal color for text.
+     * @param start Begin index for link.
+     * @param end End index for link.
+     * @param click Callback.
+     * @param attachment Data attached to the link.
+     * @param isUnderLine Whether to show the under line.
+     * @param textNormalColor Normal color for text.
      * @param textPressedColor Pressed color for text.
-     * @param bgNormalColor    Normal color for background.
-     * @param bgPressedColor   Pressed color for background.
+     * @param bgNormalColor Normal color for background.
+     * @param bgPressedColor Pressed color for background.
      * @return The ID for this clickable link.
      */
     public int addClick(int start, int end, OnClickInLinkText click, Object attachment, boolean isUnderLine,
@@ -247,7 +246,7 @@ public class LinkTextView extends TextView {
      * Set specific link text normal color.
      *
      * @param linkID Clickable link id.
-     * @param color  Text normal color
+     * @param color Text normal color
      */
     public void setTextNormalColor(int linkID, int color) {
         if (!mLinkIDMap.containsKey(linkID)) {
@@ -262,7 +261,7 @@ public class LinkTextView extends TextView {
      * Set specific link text pressed color
      *
      * @param linkID Clickable link id.
-     * @param color  Text pressed color
+     * @param color Text pressed color
      */
     public void setTextPressedColor(int linkID, int color) {
         if (!mLinkIDMap.containsKey(linkID)) {
@@ -277,7 +276,7 @@ public class LinkTextView extends TextView {
      * Set specific link background normal color
      *
      * @param linkID Clickable link id.
-     * @param color  Background normal color
+     * @param color Background normal color
      */
     public void setBackgroundNormalColor(int linkID, int color) {
         if (!mLinkIDMap.containsKey(linkID)) {
@@ -292,7 +291,7 @@ public class LinkTextView extends TextView {
      * Set specific link background pressed color.
      *
      * @param linkID Clickable link id.
-     * @param color  Background pressed color
+     * @param color Background pressed color
      */
     public void setBackgroundPressedColor(int linkID, int color) {
         if (!mLinkIDMap.containsKey(linkID)) {
