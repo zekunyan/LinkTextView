@@ -34,27 +34,29 @@ linkTextView = (LinkTextView) findViewById(R.id.linkTextView);
 
 Set text.
 ```java
-linkTextView.setClickableText("Example link.\nManual link.");
+linkTextView.setClickableText("Example link.");
 ```
 
 Add link with default color.
 ```java
-int linkID = linkTextView.addClick(manualLinkBegin, manualLinkEnd,
+int linkID = linkTextView.addClick(
+        linkBegin,                          //Link begin 
+        linkEnd,                            //Link end
         new LinkTextView.OnClickInLinkText() {
-    @Override
+    @Override    
     public void onLinkTextClick(String clickText, int linkID, Object attachment) {
         infoTextView.setText("You click manual link. It's attachment is: " + attachment);
     }
 }, 
-    "This is attachment." //Link attachment
+    "This is attachment."                  //Link attachment
 );
 ```
 
 Or add link with custom color.
 ```java
 int linkID = linkTextView.addClick(
-        exampleLinkBegin,                 //Link begin index
-        exampleLinkEnd,                   //Link end index
+        linkBegin,                         //Link begin
+        linkEnd,                           //Link end
         new LinkTextView.OnClickInLinkText() {
     @Override
     public void onLinkTextClick(String clickText, int linkID, Object attachment) {
