@@ -1,16 +1,83 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.zekunyan.linktextview.LinkTextView
+        android:id="@+id/linkTextView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFDDDDDD"
+        android:gravity="center"
+        android:textColor="#FF000000"
+        android:textSize="24sp" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textview_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFDDDDDD"
+        android:textColor="#FF000000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#03a9f4" />
+
+    <Button
+        android:id="@+id/button_change_normal_color"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Change Link Normal Color" />
+
+    <Button
+        android:id="@+id/button_change_pressed_color"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Change Link Pressed color" />
+
+    <Button
+        android:id="@+id/button_change_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Change Link Background color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#03a9f4" />
+
+    <EditText
+        android:id="@+id/edittext_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFDDDDDD"
+        android:hint="Input something as attachment..."
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Add Link" />
+
+    <Button
+        android:id="@+id/button_remove"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Remove Link" />
+
+</LinearLayout>
