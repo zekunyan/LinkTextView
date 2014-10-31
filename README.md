@@ -8,12 +8,12 @@ LinkTextView is an Android TextView to add highly customizable and colorful link
 * Set background normal color and pressed color.
 
 ## Sample
-See the LinkTextViewSample for a common use of this library.
+See the [LinkTextViewSample](https://github.com/zekunyan/LinkTextView/tree/master/LinkTextViewSample) for a common use of this library.
 ![image](Gif/LinkTextView_Sample.gif)
 
 ## How to use
 
-Download the LinkTextView.java file and copy it into your project.
+Download the [LinkTextView.java](https://github.com/zekunyan/LinkTextView/blob/master/LinkTextView/LinkTextView.java) file and copy it into your project.
 
 Add LinkTextView to your layout.
 ```xml
