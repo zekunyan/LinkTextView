@@ -83,6 +83,7 @@ linkTextView.removeLink(linkID);
 ```
 
 ## Doc
+[API Documentation](http://zekunyan.github.io/Docs/LinkTextView/index.html).
 
 
 
