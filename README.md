@@ -45,7 +45,7 @@ int linkID = linkTextView.addClick(
         new LinkTextView.OnClickInLinkText() {
     @Override    
     public void onLinkTextClick(String clickText, int linkID, Object attachment) {
-        infoTextView.setText("You click manual link. It's attachment is: " + attachment);
+        Log.i(LOG_TAG, "You click manual link. It's attachment is: " + attachment);
     }
 }, 
     "This is attachment."                  //Link attachment
@@ -60,7 +60,7 @@ int linkID = linkTextView.addClick(
         new LinkTextView.OnClickInLinkText() {
     @Override
     public void onLinkTextClick(String clickText, int linkID, Object attachment) {
-        infoTextView.setText("You click example link. It's attachment is: " + attachment);
+        Log.i(LOG_TAG, "You click example link. It's attachment is: " + attachment);
     }
 },
         "This is example link attachment", //Link attachment
